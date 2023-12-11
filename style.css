@@ -121,7 +121,7 @@ main {
 }
 
 .card {
-  max-width: 20rem;
+  max-width: 30rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -146,7 +146,7 @@ main {
 }
 
 .card__info {
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: var(--clr-neutral-300);
   font-weight: var(--fw-light);
   margin-bottom: 1rem;
@@ -185,6 +185,14 @@ main {
   background-color: var(--clr-primary-blue);
   border: none;
   box-shadow: 0px 10px 25px -12px var(--clr-primary-blue);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card__submit:is(:hover, :focus) {
+  opacity: 0.7;
+  transform: translateY(2px);
+  box-shadow: 0px 0px 25px -12px var(--clr-primary-blue);
 }
 
 footer {
@@ -212,10 +220,21 @@ footer {
   border-radius: 50%;
   border: 1px solid var(--clr-neutral-200);
   padding: 0.5rem;
+  transition: background-color 0.3s;
 }
 
 .footer__social-icon {
   width: 1rem;
   filter: brightness(0) saturate(100%) invert(39%) sepia(98%) saturate(498%)
     hue-rotate(188deg) brightness(102%) contrast(92%);
+}
+
+.footer__social-link:is(:hover, :focus) {
+  background-color: var(--clr-primary-blue);
+  border: 1px solid transparent;
+}
+
+.footer__social-link:is(:hover, :focus) > .footer__social-icon {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(7491%)
+    hue-rotate(296deg) brightness(106%) contrast(101%);
 }
