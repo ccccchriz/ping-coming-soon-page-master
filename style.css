@@ -175,6 +175,7 @@ main {
 
 .card__hint {
   color: var(--clr-secondary-red);
+  font-size: 0.75rem;
 }
 
 .card__submit {
