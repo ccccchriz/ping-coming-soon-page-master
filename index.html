@@ -18,24 +18,51 @@
   </head>
   <body>
     <main>
-      <section>
-        <h2>We are launching soon!</h2>
-        <h3>Subscribe and get notified</h3>
-        <form action="" novalidate>
-          <label for="email" class="visually-hidden">Your email address</label>
+      <section class="card">
+        <img src="assets/images/logo.svg" alt="ping logo" class="card__logo" />
+        <h1 class="card__title">We are launching <strong>soon!</strong></h1>
+        <h2 class="card__info">Subscribe and get notified</h2>
+        <form action="" novalidate id="card-form" class="card__form">
+          <label for="email" class="card__label visually-hidden">
+            email address
+          </label>
           <input
             type="email"
             name="email"
             id="email"
             placeholder="Your email address.."
+            class="card__input"
+            size="1"
           />
-          <button type="submit">Notify Me</button>
+          <p class="card__hint" id="email-hint" aria-live="assertive"></p>
+          <button type="submit" class="card__submit">Notify Me</button>
         </form>
+        <img src="assets/images/illustration-dashboard.png" alt="" />
       </section>
     </main>
 
     <footer>
-      <p>&copy; Copyright Ping. All rights reserved.</p>
+      <div class="footer__social-media">
+        <a href="" class="footer__social-link"
+          ><img
+            src="assets/images/icon-facebook.svg"
+            alt="facebook"
+            class="footer__social-icon"
+        /></a>
+        <a href="" class="footer__social-link"
+          ><img
+            src="assets/images/icon-twitter.svg"
+            alt="twitter"
+            class="footer__social-icon"
+        /></a>
+        <a href="" class="footer__social-link"
+          ><img
+            src="assets/images/icon-instagram.svg"
+            alt="instagram"
+            class="footer__social-icon"
+        /></a>
+      </div>
+      <p class="footer__text">&copy; Copyright Ping. All rights reserved.</p>
     </footer>
   </body>
 </html>
